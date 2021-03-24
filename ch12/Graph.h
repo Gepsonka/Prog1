@@ -290,6 +290,8 @@ struct Bad_image : Fl_Image {
 	void draw(int x, int y, int, int, int, int) { draw_empty(x,y); }
 };
 
+
+
 struct Suffix {
 	enum Encoding { none, jpg, gif, bmp };
 };

@@ -170,6 +170,7 @@ void Ellipse::draw_lines() const
 	}
 }
 
+
 void draw_mark(Point x, char c){
 	
 	static const int dx = 4;

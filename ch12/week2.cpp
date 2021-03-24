@@ -27,13 +27,15 @@ int main(){
 
     Axis ax {Axis::x,Point{100,300},300,10,"x"};
     ax.set_color(Color::dark_cyan);
-    //win.attach(ax);
+    win.attach(ax);
 
     Axis ay {Axis::y,Point{100,300},250,4,"y"};
     ax.set_color(Color::dark_green);
+    ax.label.set_color(Color::dark_green);
     //win.attach(ay);
 
     Function sq {square,0,10,Point{100,300},1000,20,20};
+    sq.set_color(Color::dark_cyan);
     // 1000:used points, 20,20:y*20,x*20;
     //win.attach(sq);
 
@@ -62,7 +64,7 @@ int main(){
 
     Ellipse el {Point{200,200},75,25};
     el.set_fill_color(Color::dark_magenta);
-    //win.attach(el);
+    win.attach(el);
 
 
 
