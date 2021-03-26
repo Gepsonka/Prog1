@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <vector>
 
 
 struct Person {
@@ -122,15 +123,27 @@ void Person::check_name(std::string n){
 
 int main(){
 
-    Person per;
-    std::cin>>per;
-    std::cout<<per;
+    // Person per;
+    // std::cin>>per;
+    // std::cout<<per;
+
+
+    std::vector<Person> prs;
+
+    Person p;
+
+    while (std::cin>>p){
+        prs.push_back(p);
+    }
+
+    for (auto x : prs){
+        std::cout<<x;
+        std::cout<<"\n";
+    }
+
 
     return 0;
-
-
 
 }
 
 
-// 8-as feladat not clear
