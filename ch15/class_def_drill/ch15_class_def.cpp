@@ -3,6 +3,7 @@
 #include <vector>
 
 
+
 struct Person {
     Person(){
         first_name="";
@@ -74,46 +75,46 @@ void Person::check_name(std::string n){
     for (auto i : n){
         switch (i){
         case ';':
-            throw ("Bad char",i);
+            throw std::runtime_error("Bad char");
             break;
         case ':':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         case '"':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         case '\'':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         case '[':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         case ']':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         case '*':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         case '&':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         case '^':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         case '%':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         case '$':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         case '#':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         case '@':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         case '!':
-            throw ("Bad char", i);
+            throw std::runtime_error("Bad char");
             break;
         }
     }
