@@ -67,7 +67,7 @@ std::istream &operator>>(std::istream &input, Person &P){
 
 void Person::check_age(int n){
     if (n<0 || n>150){
-        throw ("Bad age range!");
+        throw std::runtime_error("Bad age range!");
     }
 }
 

@@ -57,7 +57,8 @@ struct D21 : B2 {
 };
 
 
-struct D22 : B2{
+struct D22
+ : B2{
     void pvf() override{
         std::cout<<n<<"\n";
     }
