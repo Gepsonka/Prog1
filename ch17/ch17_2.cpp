@@ -4,8 +4,8 @@
 
 int main(){
 
-    int* p1=new int(7);
-    //std::cout<<p1<<"\n"<<*p1<<"\n";
+    int* p1=new int{7};
+    // std::cout<<p1<<"\n"<<*p1<<"\n";
 
 
     int* p2=new int[7]{1,2,4,8,16,32,64};
