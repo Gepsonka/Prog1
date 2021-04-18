@@ -29,13 +29,10 @@ public:
     auto end();
 
     auto insert(iterator p, const Elem& v);
-    iterator erase(iterator p);
+    void erase(iterator p);
 
     void push_back(const Elem& v);
     void push_front(const Elem& v);
-
-    void pop_front();
-    void pop_back();
 
     Elem& front();
     Elem& back();
@@ -53,9 +50,11 @@ class List<Elem>::iterator{
 public:
     iterator(Link<Elem>* p):curr{p}{}
 
+    Link<Elem>* get_curr(){return curr;}
 
     iterator& operator++(){curr=curr->succ; return *this;}
     iterator& operator--(){curr=curr->prev; return *this;}
+    Link<Elem>* operator->(){return curr;}
     Elem& operator*(){return curr->val;}
 
     bool operator==(const iterator& b) const {return curr==b.curr;}
