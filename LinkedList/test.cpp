@@ -67,7 +67,7 @@ List<Elem>::~List(){
 
 template<class Elem>
 auto List<Elem>::begin(){
-    return List<Elem>::iterator(first);
+    if (first!=nullptr) return List<Elem>::iterator(first);
 }
 
 
@@ -75,7 +75,9 @@ auto List<Elem>::begin(){
 
 template<class Elem>
 auto List<Elem>::end(){
-    return List<Elem>::iterator(last->succ);
+    if(first!=nullptr){
+        return List<Elem>::iterator(last->succ);
+    }
 }
 
 
@@ -150,10 +152,15 @@ void List<Elem>::push_back(const Elem& v){
 
 template<class Elem>
 void List<Elem>::push_front(const Elem& v){
-    first->prev=new Link<Elem>;
-    first->prev->succ=first;
-    first->prev->val=v;
-    first=first->prev;
+    if (first!=nullptr){
+        first->prev=new Link<Elem>;
+        first->prev->succ=first;
+        first->prev->val=v;
+        first=first->prev;
+    } else {
+        push_back(v);
+    }
+    
 
 }
 
@@ -168,11 +175,9 @@ void List<Elem>::push_front(const Elem& v){
 
 int main(){
 
-    List<int> l {1,2,3,5,6,7,8};
-    l.insert(l.begin(),123);
-    l.insert(l.end(),76);
-    l.push_back(233);
-    l.erase(l.end());
+    List<int> l {};
+    l.erase(l.begin());
+    
 
 
     for (List<int>::iterator i=l.begin();i!=l.end();++i){
