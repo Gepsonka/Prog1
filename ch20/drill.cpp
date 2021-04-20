@@ -61,4 +61,12 @@ int main(){
     }
     cout<<endl;
 
+
+    vector<int>::iterator p=find(vec.begin(),vec.end(),3);
+    if(p==vec.end()){
+        cout<<endl<<"Int not in vector"<<endl;
+    } else {
+        cout<<endl<<*p<<endl;
+    }
+
 }
